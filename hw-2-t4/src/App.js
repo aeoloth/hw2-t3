@@ -1,24 +1,20 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-import { Button, Card, Elevation } from "@blueprintjs/core";
+import React from "react";
+import "./App.css";
+import { Card, Elevation } from "@blueprintjs/core";
 
 function App() {
+  const newsCard = (title, descr) => {
+    <Card interactive={true} elevation={Elevation.TWO}>
+      <h4>{title}</h4>
+      <p>{descr}</p>
+    </Card>;
+  };
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-
+        <img src="./citrus.jpg"  alt="citrus" />
       </header>
-      <content>
-
- 
- <Card interactive={true} elevation={Elevation.TWO}>
-     <h5><a href="#">Card heading</a></h5>
-     <p>Card content</p>
-     <Button>Submit</Button>
- </Card>
-      </content>
+      <content></content>
     </div>
   );
 }
